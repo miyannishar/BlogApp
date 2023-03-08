@@ -10,7 +10,7 @@ class AuthController{
             if(username && email && password){
                 const isUser = await(authModel.findOne({email: email}));
                 if(!isUser){
-                    res.send("Registration successfully")
+                    // res.send("Registration successfully")
 
                     //Password Hashing and storing
                     const genSalt = await bcryptjs.genSalt(10);
@@ -44,6 +44,7 @@ class AuthController{
             }
         } catch (error) {
             return res.status(400).json({message: error.message})
+            // console.log("Happy")
         }
 
 
