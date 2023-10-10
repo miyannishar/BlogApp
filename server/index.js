@@ -2,17 +2,18 @@ import express, { application } from "express";
 import connectToMongo from "./config/db.js"
 import authRoutes from "./routes/blog.js"
 import cors from "cors"
+import react-router-dom
 
 const router = express.Router()
 
 const app = express();
-const PORT = 9000;
+const PORT = 5000;
 
 connectToMongo();
 
 app.get("/", (req, res)=>{
     res.send("API is running");
-    console.log("Workinggg")
+    console.log("It is working perfectly")
 })
 
 //API Routes
